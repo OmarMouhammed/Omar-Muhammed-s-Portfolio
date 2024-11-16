@@ -14,14 +14,14 @@ body {
 }
 
 .sidebar {
-    width: 300px;
-    height: 100vh;
-    background-color: #17a587;
-    border-top-right-radius: 30px;
-    box-shadow: 0 0 15px #17ffba;
     position: fixed;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100vw; /* بدل px بـ vw علشان يكون العرض بنسبة من عرض الشاشة */
+    background-color: #17a587;
+    border-top-right-radius: 30px;
+    box-shadow: 0 0 15px #17ffba;
     z-index: 10;
     padding-top: 50px;
     display: flex;
