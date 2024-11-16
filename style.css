@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #17a587;
+    border-top-right-radius: 30px;
+    box-shadow: 0 0 15px #17ffba;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: left;
+    padding: 10px 20px;
+    padding-left: 60px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar a::before {
+    content: '→';
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.sidebar a:hover {
+    color: #17ffba;
+    transform: scale(1.1);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.content {
+    margin-left: 300px;
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    height: 100vh;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+header {
+    background-color: #17a587;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.home-content {
+    text-align: center;
+    animation: fadeInUp 5s ease-out;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(23, 165, 135, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-img.active {
+    transform: scale(1.1); /* تكبير الصورة */
+    box-shadow: 0 0 30px rgba(23, 165, 135, 0.8); /* زيادة التأثير حول الصورة */
+}
+
+.profile-img:hover {
+    transform: translateX(10px) scale(1.2);
+}
+
+/* التأثير عند المرور على النص */
+.about-me {
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.3s ease-in-out; /* تأثير الانتقال */
+}
+
+/* التأثير عند مرور الماوس */
+.about-me:hover {
+    font-family: 'Roboto', light;
+    text-shadow: 0 0 50px #00bd48;
+    transform: translateY(-5px); /* رفع النص عند المرور عليه */
+}
+
+.name {
+    font-family: 'Roboto', sans-serif;
+    color: #17a587;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.name:hover {
+    color: #047a61;
+    text-shadow: 0 0 3px #047a61;
+    transform: translateX(10px) scale(1.2);
+}
+
+.role {
+    color: #17a587;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.about-me {
+    font-size: 1rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تنسيق عام لقسم experience */
+/* تنسيق العناوين */
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #17a587;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-shadow: 0 0 30px #17ffba;
+    transform: translateX(10px);
+    transition: all 0.3s ease-in-out;
+    animation: fadeInUp 3s ease-out;
+    
+}
+
+.section-title :hover {
+    color: #17a589; /* تغيير اللون */
+    text-shadow: 0 0 10px #17a589, 0 0 20px #17a589, 0 0 30px #17a589; /* تأثير النيون */
+    transform: translateX(15px) scale(1.05); /* تحريك العنصر إلى اليمين وتكبيره قليلاً */
+    transition: all 0.3s ease; /* التأثيرات تكون سلسة */
+}
+
+/* تنسيق الخبرات */
+.experience {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+    animation: fadeInUp 3s ease-out;
+
+}
+
+.experience h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #17a587;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+    animation: fadeInUp 3s ease-out;
+
+}
+
+.experience h3::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: #17ffba;
+    animation: fadeInUp 3s ease-out;
+
+}
+
+.experience p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    animation: fadeInUp 3s ease-out;
+
+}
+
+/* تأثيرات عند التمرير على العناوين */
+.experience h3:hover {
+    color: #047a61;
+    text-shadow: 0 0 5px #17ffba;
+    transform: translateX(10px);
+    transition: all 0.3s ease-in-out;
+    animation: fadeInUp 3s ease-out;
+
+}
+
+/* إضافة تأثير النيون للنص */
+.skills-list .skill {
+    border: none; /* إزالة الحدود حول العنصر */
+    position: relative; /* لتمكين الشريط الذي سنضيفه أمام النص */
+    padding: 10px; /* إضافة بعض الحشو للنص */
+    font-size: 16px; /* حجم النص */
+    font-family: 'Roboto', sans-serif; /* الخط المستخدم */
+    font-weight: 900; /* تحديد الوزن Black من الخط */
+    text-align: left; /* محاذاة النص لليسار */
+    margin-bottom: 15px; /* مسافة بين العناصر */
+    color: #047a61; /* لون النص أبيض */
+    animation: fadeInUp 3s ease-out;
+
+}
+
+/* إضافة شريط النيون */
+.skills-list .skill::before {
+    content: ""; /* لا شيء داخل العنصر الافتراضي */
+    position: absolute; /* تحديد الموقع */
+    bottom: 0; /* الشريط يكون أسفل النص */
+    left: 0;
+    width: 100%; /* العرض يكون 100% من العنصر */
+    height: 4px; /* ارتفاع الشريط */
+    background: linear-gradient(90deg, #17a589, #00ffcc); /* شريط نيون بتدرج لوني */
+    box-shadow: 0 0 15px rgba(23, 165, 137, 0.8); /* تأثير النيون */
+    transition: width 0.4s ease-in-out; /* تأثير انسيابي عندما يظهر الشريط */
+    animation: fadeInUp 3s ease-out;
+
+}
+
+/* إضافة النسبة المئوية */
+.skills-list .skill[data-percentage]::after {
+    content: attr(data-percentage); /* عرض نسبة القدرة */
+    position: absolute; /* تحديد الموقع */
+    right: 0px;
+    padding-right: 90px;
+    top: 20px; /* رفع النسبة فوق العنصر */
+    font-weight: bold; /* جعل النص ثقيل */
+    color: #093f2f; /* لون النص أبيض */
+    animation: fadeInUp 3s ease-out;
+
+}
+
+/* زيادة عرض شريط النيون حسب نسبة القدرة */
+.skills-list .skill[data-percentage="90%"]::before {
+    width: 40%;
+}
+.skills-list .skill[data-percentage="80%"]::before {
+    width: 30%;
+}
+.skills-list .skill[data-percentage="95%"]::before {
+    width: 45%;
+}
+.skills-list .skill[data-percentage="70%"]::before {
+    width: 20%;
+}
+.skills-list .skill[data-percentage="90%"]::before {
+    width: 35%;
+}
+.skills-list .skill[data-percentage="100%"]::before {
+    width: 50%;
+}
+
+
+
+.skills-list :hover {
+    color: #17a589; /* تغيير اللون */
+    text-shadow: 0 0 10px #17a589, 0 0 20px #17a589, 0 0 30px #17a589; /* تأثير النيون */
+    transform: translateX(15px) scale(1.05); /* تحريك العنصر إلى اليمين وتكبيره قليلاً */
+    transition: all 0.3s ease; /* التأثيرات تكون سلسة */
+}
+
+
+/* تأثير الكتابة الاحترافية للنص */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.experience-item .role {
+    font-weight: bold;
+    color: #17a587;
+    font-size: 1.2rem;
+}
+
+.experience-item .company {
+    font-style: italic;
+    color: #555;
+}
+#projects {
+    margin-top: 500px;
+    padding: 40px;
+    text-align: center;
+}
+
+#projects .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #17a589;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'RobotoBlack', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#projects .section-title:hover {
+    color: #047a61;
+    transform: translateY(-5px);
+    text-shadow: 0 0 8px #047a61, 0 0 15px #17a589;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    flex: 1 1 calc(16.66% - 20px); /* 6 مربعات بجانب بعض */
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.video-container {
+    margin-top: 40px;
+    max-width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#contact {  
+    margin-top: 500px;
+    padding: 40px;
+    text-align: center;
+}
+
+#contact .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #17a589;
+    text-transform: uppercase;
+    font-family: 'RobotBlack', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 0 3px #047a61, 0 0 15px #17a589;
+}
+
+#contact .section-title:hover {
+    color: #047a61;
+    transform: translateY(-5px);
+    text-shadow: 0 0 8px #047a61, 0 0 15px #17a589;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #17a589;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #17a589;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #047a61;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-media a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a img:hover {
+    transform: scale(1.1);
+}
+
+/* عند الضغط على الروابط */
+.active {
+    transform: translateX(10px);
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px #17ffba;
+    transition: all 0.3s ease-in-out;
+}
+/* أسلوب الحقول */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #17a589;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'RobotBlack', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* تأثير النيون */
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #17a589;
+    box-shadow: 0 0 10px #17a589, 0 0 20px #17a589, 0 0 30px #17a589;
+    color: #17a589;
+}
+
+/* تأثير النص داخل الحقول عند التمرير عليها */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: #aaa;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* تغيير اللون لما يكون الحقل متركز عليه */
+.form-container input:focus::placeholder,
+.form-container textarea:focus::placeholder {
+    color: #17a589;
+}
+
+/* تأثير عند التمرير على الحقول */
+.form-container input:hover,
+.form-container textarea:hover {
+    border-color: #17a589;
+    box-shadow: 0 0 5px #17a589;
+    transition: all 0.3s ease;
+}
+/* العرض لأجهزة الموبايل */
+@media (max-width: 768px) {
+    /* خلي الصور جنب بعض بمقاس أصغر */
+    #projects .project-container {
+        grid-template-columns: repeat(2, 1fr); /* صفين جنب بعض */
+        gap: 10px; /* مسافة أصغر بين الصور */
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%; /* خلي الصناديق تملأ الشاشة */
+    }
+}
+
+/* العرض لأجهزة التابلت */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #projects .project-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 صور في الصف */
+    }
+}

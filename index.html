@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Muhammed's Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- رابط ملف CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"> <!-- الخط -->
+    <!-- تحميل مكتبة Lightbox من CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+</head>
+<body>    
+    <!-- الروابط مع الصوت عند التمرير -->
+    <a href="#" class="sound-link" onmouseover="playSound()" onmouseout="stopSound()">Home</a>
+    <a href="#" class="sound-link" onmouseover="playSound()" onmouseout="stopSound()">Experience</a>
+    <a href="#" class="sound-link" onmouseover="playSound()" onmouseout="stopSound()">Projects</a>
+    <a href="#" class="sound-link" onmouseover="playSound()" onmouseout="stopSound()">Contact</a>
+
+    <!-- ملف الصوت -->
+    <audio id="audio" src="your-sound-file.mp3" preload="auto"></audio>
+
+    <!-- العمود الجانبي -->
+    <div class="sidebar">
+        <a href="#home" id="home-link" onmouseover="playSound()">Home</a>
+        <a href="#experience" id="experience-link" onmouseover="playSound()">Experience</a>
+        <a href="#projects" id="projects-link" onmouseover="playSound()">Projects</a>
+        <a href="#contact" id="contact-link" onmouseover="playSound()">Contact</a>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="content">
+        <!-- القسم الرئيسي -->
+        <section id="home">
+            <div class="home-content">
+                <img src="your-image.jpg" alt="Omar Muhammed" class="profile-img">
+                <h1 class="name">Omar Muhammed</h1>
+                <h2 class="role">Graphic Designer / Developer</h2>
+                <p class="about-me">I am a passionate graphic designer and developer with a love for creating visually appealing and functional designs. My journey in design has been focused on bringing ideas to life through creative solutions. I am always eager to learn and stay updated with the latest trends in design and development.</p>
+            </div>
+        </section>
+
+        <!-- قسم الخبرة -->
+        <section id="experience">
+            <div class="experience-section">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience">
+                    <h3>2017 - 2020</h3>
+                    <p> <strong> I started my journey in eSports teams </strong> I have come a long way in learning design, montage, and some simple Programming</p>
+             </div>
+                <div class="experience">
+                    <h3>2021 - Present</h3>
+                    <p><strong>Freelancing</strong>, working on diverse projects across design and media.</p>
+                </div>
+                <div class="experience">
+                    <h3>2021 - Present</h3>
+                    <p>Currently employed at <strong>Sayed Ahmed</strong> as a Social Media Manager, Graphic Designer, and Video Editor.</p>
+                </div>
+                <div class="experience">
+                    <h3>2024</h3>
+                    <p>Worked at <strong>Tharaa Training in Technology and Programming</strong> as a Junior Graphic Designer and Video Editor. (Contract completed)</p>
+                </div>
+            </div>
+            
+            <!-- قسم المهارات -->
+            <div class="skills-section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-list">
+                    <div class="skill" data-percentage="90%">Software Engineer</div>
+                    <div class="skill" data-percentage="80%">Hardware Engineer</div>
+                    <div class="skill" data-percentage="95%">Photoshop</div>
+                    <div class="skill" data-percentage="70%">Illustrator</div>
+                    <div class="skill" data-percentage="90%">Filmora</div>
+                    <div class="skill" data-percentage="100%">Microsoft Office (Word, Excel)</div>
+                </div>
+            </div>
+        </section>
+
+      <!-- قسم المشاريع -->
+        <section id="projects">
+            <h2 class="section-title">Some Projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <a href="images/project1.jpg" target="_blank">
+                        <img src="images/project1.jpg" alt="Project 1">
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="images/project2.jpg" target="_blank">
+                        <img src="images/project2.jpg" alt="Project 2">
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="images/project3.jpg" target="_blank">
+                        <img src="images/project3.jpg" alt="Project 3">
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="images/project4.jpg" target="_blank">
+                        <img src="images/project4.jpg" alt="Project 4">
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="images/project5.jpg" target="_blank">
+                        <img src="images/project5.jpg" alt="Project 5">
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="images/project6.jpg" target="_blank">
+                        <img src="images/project6.jpg" alt="Project 6">
+                    </a>
+                </div>
+            </div>
+            <div class="video-container">
+                <video width="100%" controls>
+                    <source src="video/project-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        
+<!-- قسم الاتصال -->
+<section id="contact">
+    <h2 class="section-title">SEND ME NOW!</h2>
+    
+    <!-- النموذج المعدل باستخدام Formspree -->
+    <form action="https://formspree.io/f/xgveyjvw" method="POST">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    
+    <!-- السوشيال ميديا -->
+    <div class="social-media">
+        <a href="https://www.behance.net/mor0channel" target="_blank"><img src="icons/behance.png" alt="Behance"></a>
+        <a href="https://www.facebook.com/profile.php?id=100014775906881" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/_moro_x" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+        <a href="https://wa.me/+201273576519" target="_blank"><img src="icons/social.png" alt="WhatsApp"></a>
+    </div>
+</section>
+
+    
+    <!-- ربط السكربت -->
+    <script src="script.js"></script>
+</body>
+</html>
