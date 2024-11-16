@@ -30,13 +30,6 @@ body {
     align-items: center;
 }
 
-/* تعديل العرض في الموبايل */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 10vw; /* زيادة العرض إلى 30% من عرض الشاشة في الموبايل */
-    }
-}
-
 .sidebar a {
     text-decoration: none;
     color: white;
