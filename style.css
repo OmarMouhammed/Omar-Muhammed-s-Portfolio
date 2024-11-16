@@ -18,7 +18,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 20vw; /* بدل px بـ vw علشان يكون العرض بنسبة من عرض الشاشة */
+    width: 40vw; /* بدل px بـ vw علشان يكون العرض بنسبة من عرض الشاشة */
     background-color: #17a587;
     border-top-right-radius: 30px;
     box-shadow: 0 0 15px #17ffba;
@@ -33,7 +33,7 @@ body {
 /* تعديل العرض في الموبايل */
 @media (max-width: 768px) {
     .sidebar {
-        width: 100vw; /* زيادة العرض إلى 30% من عرض الشاشة في الموبايل */
+        width: 60vw; /* زيادة العرض إلى 30% من عرض الشاشة في الموبايل */
     }
 }
 
