@@ -543,28 +543,3 @@ form {
     box-shadow: 0 0 5px #17a589;
     transition: all 0.3s ease;
 }
-/* العرض لأجهزة الموبايل */
-@media (max-width: 768px) {
-    /* خلي الصور جنب بعض بمقاس أصغر */
-    #projects .project-container {
-        grid-template-columns: repeat(2, 1fr); /* صفين جنب بعض */
-        gap: 10px; /* مسافة أصغر بين الصور */
-    }
-
-    .project img {
-        width: 100%;
-        height: auto;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%; /* خلي الصناديق تملأ الشاشة */
-    }
-}
-
-/* العرض لأجهزة التابلت */
-@media (min-width: 768px) and (max-width: 1024px) {
-    #projects .project-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 صور في الصف */
-    }
-}
