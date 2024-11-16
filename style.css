@@ -18,7 +18,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100vw; /* بدل px بـ vw علشان يكون العرض بنسبة من عرض الشاشة */
+    width: 20vw; /* بدل px بـ vw علشان يكون العرض بنسبة من عرض الشاشة */
     background-color: #17a587;
     border-top-right-radius: 30px;
     box-shadow: 0 0 15px #17ffba;
@@ -28,6 +28,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* تعديل العرض في الموبايل */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50vw !important; /* زيادة العرض إلى 35% في الموبايل مع استخدام !important */
+    }
 }
 
 .sidebar a {
