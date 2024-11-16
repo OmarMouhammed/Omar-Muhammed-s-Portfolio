@@ -382,6 +382,7 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    height: 200px; /* تحديد ارتفاع المربع */
 }
 
 .project:hover {
@@ -394,6 +395,7 @@ header {
     object-fit: cover;
     border-radius: 10px;
 }
+
 
 .video-container {
     margin-top: 40px;
