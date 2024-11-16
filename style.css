@@ -572,4 +572,14 @@ form {
     }
 }
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;  /* خلي العناصر تتوزع بشكل ملائم */
+    justify-content: space-between;  /* خلي المسافات بين العناصر متساوية */
+}
+
+.project img {
+    max-width: 100%;  /* خلي الصورة تتمدد حسب عرض المربع */
+    height: auto;  /* حافظ على الأبعاد المناسبة للصورة */
+}
 
