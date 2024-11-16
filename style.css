@@ -18,7 +18,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 50px; /* بدل px بـ vw علشان يكون العرض بنسبة من عرض الشاشة */
+    width: 20vw; /* بدل px بـ vw علشان يكون العرض بنسبة من عرض الشاشة */
     background-color: #17a587;
     border-top-right-radius: 30px;
     box-shadow: 0 0 15px #17ffba;
@@ -357,6 +357,7 @@ header {
     text-align: center;
 }
 
+
 #projects .section-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -549,4 +550,29 @@ form {
     border-color: #17a589;
     box-shadow: 0 0 5px #17a589;
     transition: all 0.3s ease;
+}
+/* العرض لأجهزة الموبايل */
+@media (max-width: 768px) {
+    /* خلي الصور جنب بعض بمقاس أصغر */
+    #projects .project-container {
+        grid-template-columns: repeat(2, 1fr); /* صفين جنب بعض */
+        gap: 10px; /* مسافة أصغر بين الصور */
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%; /* خلي الصناديق تملأ الشاشة */
+    }
+}
+
+/* العرض لأجهزة التابلت */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #projects .project-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 صور في الصف */
+    }
 }
