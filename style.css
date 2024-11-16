@@ -33,7 +33,7 @@ body {
 /* تعديل العرض في الموبايل */
 @media (max-width: 768px) {
     .sidebar {
-        width: 50vw !important; /* زيادة العرض إلى 35% في الموبايل مع استخدام !important */
+        width: 80vw !important; /* زيادة العرض إلى 35% في الموبايل مع استخدام !important */
     }
 }
 
